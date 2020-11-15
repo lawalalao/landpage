@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+    <title>chapchap</title>
+</head>
+<body>
+    
+        <div class="nav" id="navbar">
+            <div class="logo">
+                 <a href="#"> chapchap</a>
+            </div>
+            <div class="links">
+            
+              
+            </div>
+        </div>
+
+    <section class="signup">
+        <div class="signup-intro">
+            <h1 class="z">Livraison pour 
+                <span class="txt-type" data-wait="500" data-words='["les colis", "les plis", "les marchandises", "le retail", "le dernier Kilometre"]'></span>
+            </h1>
+            <h1 class="x">Service n°1 de livraison de colis géolocalisé pour les professionnels au Togo</h1>
+             <div class="countdown"></div>
+        
+        </div>
+           
+        <div class="signup-form">
+            <div class="tryit-banner">
+                <p>Envie d'en savoir plus ? </p>
+            </div>
+    
+            <form action="">
+                <input type="text" placeholder="Nom">
+                <input type="text" placeholder="Prenom">
+                <input type="email" placeholder="Addresse email">
+               
+                <button class="button">Envoyez</button>
+                
+            </form>
+        </div>
+    </section>
+</body>
+<script src="./app.js"></script>
+<script>  var prevScrollpos = window.pageYOffset;
+      window.onscroll = function() {
+
+      var currentScrollpos = window.pageYOffset;
+      if(prevScrollpos > currentScrollpos) {
+            document.getElementById("navbar").style.top = "0";
+      } else {
+            document.getElementById("navbar").style.top = "-400px";
+      }
+
+      prevScrollpos = currentScrollpos;
+
+      }</script>
+</html>

@@ -13,7 +13,9 @@ body {
 .social i{
     color:#1E90FF;
 }
-
+.z span{
+    color:white;
+}
 .social i:hover {
     color: rgb(25, 29, 238);
 }
@@ -50,7 +52,7 @@ body {
 }
 .txt-type>.txt {
     font-size: 35px;
-    color: #1E90FF;
+    color: #9e9e9e;
     border-right: 0.2rem solid white;
 }
 h1{

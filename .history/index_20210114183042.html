@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/icone.png">
+    <meta http-equiv="refresh" content="30">
+    <link href="./assets/fontawesome-free-5.15.1-web/css/all.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+    <title>chapchap</title>
+     <meta name="description" content="Service n°1 de livraison de colis géolocalisé pour les professionnels au Togo.comingsoon">
+</head>
+<body>
+        
+        <div class="nav" id="navbar">
+            <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img src="./assets/logo.png" width="90" height="90" alt="logo" loading="lazy">
+            </a>
+            </nav>
+            <div>
+                <a href="https://web.facebook.com/chapchap.tg" target="_blank" ><i class="fab fa-facebook-square"></i></a>
+                <a href="https://www.instagram.com/chapchap_tg/" target="_blank"><i class="fab fa-instagram-square"></i></a>
+                <a href="https://twitter.com/chapchaptg" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                <a href="https://www.linkedin.com/company/chapchap-tg" target="_blank" ><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+
+    <section class="signup">
+        <div class="signup-intro">
+            <h1 class="z">Livraison pour 
+                <span class="txt-type" data-wait="500" data-words='["les colis", "les plis", "les marchandises", "le retail", "le dernier Kilometre"]'></span>
+            </h1>
+            <h1 class="x">Service n°1 de livraison de colis géolocalisé pour les professionnels au Togo</h1>
+             <div class="countdown"></div>
+        
+        </div>
+           
+        <div class="signup-form">
+            <div class="tryit-banner">
+                <p>Envie d'en savoir plus ? </p>
+            </div>
+    
+            <form action="https://formspree.io/f/xleollba" method="POST"">
+                <input type="text" name="name" placeholder="Nom">
+                <input type="text" name="name" placeholder="Prenom">
+                <input type="email" name="_replyto"placeholder="Addresse email" required>
+               
+                <button class="button">Envoyez</button>
+                
+            </form>
+        </div>
+    </section>
+</body>
+<script src="./app.js"></script>
+<script>  var prevScrollpos = window.pageYOffset;
+      window.onscroll = function() {
+
+      var currentScrollpos = window.pageYOffset;
+      if(prevScrollpos > currentScrollpos) {
+            document.getElementById("navbar").style.top = "0";
+      } else {
+            document.getElementById("navbar").style.top = "-400px";
+      }
+
+      prevScrollpos = currentScrollpos;
+      
+      }</script>
+</html>

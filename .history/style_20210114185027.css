@@ -1,0 +1,590 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+/*===== VARIABLES CSS =====*/
+:root {
+    --header-height: 3rem;
+
+    /*===== Colors =====*/
+    --first-color: #5B65F5;
+    --first-color-light: #C4C7F5;
+    --dark-color: #0E1026;
+    --white-color: #FBFBFB;
+
+    /*===== Font and typography =====*/
+    --body-font: 'Open Sans', sans-serif;
+    --nav-name-font-size: 1.5rem;
+    --normal-font-size: .938rem;
+
+    /*===== z index =====*/
+    --z-fixed: 100;
+}
+
+@media screen and (min-width: 768px) {
+    :root {
+        --nav-name-font-size: 1rem;
+        --normal-font-size: 1rem;
+    }
+}
+
+/*===== BASE =====*/
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: var(--header-height) 0 0 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    font-weight: 600;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.bd-grid {
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: 100%;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+/*===== HEADER =====*/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    padding: 0 1rem;
+    background-color: #FFF;
+    z-index: var(--z-fixed);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header__logo {
+    color: var(--dark-color);
+}
+
+.header__toggle {
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+/*===== NAV =====*/
+@media screen and (max-width: 768px) {
+    .nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        background-color: var(--first-color);
+        width: 80%;
+        height: 100vh;
+        padding: 2rem 0;
+        z-index: var(--z-fixed);
+        transition: .5s;
+        overflow-y: auto;
+    }
+}
+
+.nav__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav__perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.nav__img {
+    display: flex;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.nav__img img {
+    width: 70px;
+}
+
+.nav__name {
+    display: block;
+    font-size: var(--nav-name-font-size);
+    color: var(--white-color);
+}
+
+.nav__item {
+    margin-bottom: 2rem;
+}
+
+.nav__link {
+    color: var(--first-color-light);
+}
+
+.nav__link:hover {
+    color: var(--white-color);
+}
+
+/*Show menu*/
+.show {
+    left: 0;
+}
+
+/*Active link*/
+.active {
+    color: var(--white-color);
+}
+
+/*=== Dropdown ===*/
+.dropdown__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dropdown__icon {
+    font-size: 1.3rem;
+    transition: .5s;
+}
+
+.dropdown__menu {
+    margin: 1rem 0 0 1rem;
+    display: none;
+}
+
+.dropdown__item {
+    margin: 1rem 0;
+}
+
+.dropdown:hover>.dropdown__menu {
+    display: block;
+}
+
+.dropdown:hover .dropdown__icon {
+    transform: rotate(180deg);
+}
+
+/* ===== MEDIA QUERIES=====*/
+@media screen and (min-width: 576px) {
+    .nav {
+        width: 288px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        margin: 0;
+    }
+
+    .header {
+        height: calc(var(--header-height) + 1rem);
+    }
+
+    .header__logo,
+    .header__toggle {
+        display: none;
+    }
+
+    .nav {
+        width: 100%;
+    }
+
+    .nav__content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav__perfil {
+        flex-direction: row;
+        text-align: initial;
+        margin-bottom: 0;
+    }
+
+    .nav__img {
+        width: 40px;
+        height: 40px;
+        margin-right: .5rem;
+        margin-bottom: 0;
+    }
+
+    .nav__img img {
+        width: 46px;
+    }
+
+    .nav__name {
+        color: var(--dark-color);
+    }
+
+    .nav__list {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav__item {
+        margin: 0 1.5rem;
+        padding: 1.4rem 0;
+    }
+
+    .nav__link {
+        color: var(--dark-color);
+    }
+
+    .nav__link:hover {
+        color: var(--first-color);
+    }
+
+    /*Active link new color*/
+    .active {
+        color: var(--first-color);
+    }
+
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown__menu {
+        position: fixed;
+        margin: 0;
+        top: calc(var(--header-height) + 1rem);
+        padding: .5rem 1.5rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: .5rem;
+    }
+
+    .dropdown__item {
+        margin: .5rem 0;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .bd-grid {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+body {
+    font-family: 'Allerta Stencil',
+    sans-serif;
+    max-width: 310px;
+    margin: 0 auto;
+    padding: 20px 20px;
+    background: url("./assets/image.jpeg") center no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: Black;
+    text-align: center;
+}
+.nav {
+    margin-top: 30px;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 30px;
+    left: 40px;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px 0 25px;
+    background-color: transparent;
+    transition: top 0.3s;
+
+
+}
+
+.z{
+    margin-top: 70px;
+}
+.nav a {
+    float: left;
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: 25px;
+    color: black;
+    text-decoration: none;
+
+}
+.txt-type>.txt {
+    font-size: 35px;
+    color: #1E90FF;
+    border-right: 0.2rem solid white;
+}
+h1{
+     -webkit-text-stroke: 1px white;
+     color:black;
+}
+p {
+    font-size: 14px;
+}
+
+.tryit-banner {
+    background-color:#1E90FF;
+    border-radius: 10px;
+    margin-top: 50px;
+    box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+.tryit-banner p {
+    padding: 15px 0;
+}
+
+input, button {
+    font-family: 'Allerta Stencil',
+    sans-serif;
+}
+
+form {
+    background-color: #fff;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    padding-left: 20px;
+    font-weight: 600;
+    border: 1px solid hsl(245, 35%, 87%);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: 0.1s;
+}
+
+input:hover {
+    border: 1px solid hsl(246, 25%, 77%);
+}
+
+.button {
+    background-color:#1E90FF;
+    font-family: 'Allerta Stencil',
+    sans-serif;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 3px 0px rgba(0, 0, 0, 0.3);
+    padding: 15px 0;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.button:hover {
+    background-color:#042b52;
+}
+
+.form-disclaimer {
+    color: hsl(246, 25%, 77%);
+    font-size: 10px;
+}
+
+.terms {
+    text-decoration: none;
+    font-weight: 600;
+    color: hsl(0, 100%, 74%);
+}
+ .countdown {
+
+    display: flex;
+    margin-left: -30px;
+ 
+    font-size: 30px;
+     font-weight: 200;
+
+ }
+
+ .countdown div {
+
+     background: linear-gradient(to bottom,
+             rgba(61, 58, 58, 0.9) 50%,
+             rgba(99, 93, 93, 0.9) 0);
+
+
+     color: white;
+   
+     margin: 1rem 1rem 3rem 1rem;
+     font-size: 3rem;
+     font-weight: 400;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.1);
+     border-radius: 8px;
+
+     position: relative;
+ }
+
+ .countdown div::before {
+     content: "";
+     position: absolute;
+
+     height: 0.24rem;
+     background-color: #17181b;
+ }
+
+ .countdown div::after {
+     content: attr(data-content);
+     font-size: 6rem;
+     font-weight: 400;
+     position: absolute;
+     bottom: -6rem;
+ }
+
+ @media screen and (min-width: 480px) {
+     .countdown {
+         font-size: 25px;
+         display: flex;
+
+     }
+     .navbar-brand img {
+         margin-top: 10px;
+     }
+     .countdown div {
+         display: flex;
+         margin: 1rem 1rem 1rem 1rem;
+         font-size: 2rem;
+         flex-direction: column;
+     }
+
+     .countdown div::after {
+         font-size: 2rem;
+         display: flex;
+         flex-direction: column;
+         width: 60%;
+
+     }
+ }
+
+ @media screen and (min-width: 768px) {
+     .countdown {
+         font-size: 56px;
+
+
+     }
+
+     .countdown {
+         font-size: 25px;
+         display: flex;
+
+     }
+
+     .countdown div {
+         display: flex;
+         margin: 1rem 1rem 1rem 1rem;
+         font-size: 3rem;
+         flex-direction: column;
+     }
+
+     .countdown div::after {
+         font-size: 2.2rem;
+         display: flex;
+         flex-direction: column;
+         width: 60%;
+
+     }
+
+     .signup {
+         text-align: center;
+     }
+ }
+
+ @media screen and (min-width: 1024px) {
+     header .content .countdown {
+         font-size: 72px;
+
+     }
+ }
+
+ @media screen and (min-width: 1280px) {
+     .content .countdown {
+         font-size: 56px;
+     }
+ }
+@media screen and (min-width: 900px) {
+    .nav{
+        height: 80px;
+    }
+    .nav a {
+        float: left;
+        font-size: 40px;
+        font-weight: bold;
+        margin-left: 25px;
+        color: black;
+        text-decoration: none;
+
+    }
+    .signup {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .signup-intro {
+        margin-top: 25px;
+        width: 100%;
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+    }
+
+    .signup-form {
+        width: 46%;
+        font-family: 'Allerta Stencil',
+        sans-serif;
+        margin-top: 30px;
+    }
+   
+    form {
+        padding: 30px;
+    }
+
+    body {
+        margin:100px auto;
+        max-width: 1000px;
+        padding: 40px 20px;
+        background: url("./assets/image.jpeg") ;
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: 'Allerta Stencil',
+        sans-serif;
+    }
+
+    h1 {
+        font-size:45px;
+        margin-bottom: 0px;
+        -webkit-text-stroke: 1px white;
+        color:black;
+    }
+
+    p {
+        font-size: 20px;
+    }
+}

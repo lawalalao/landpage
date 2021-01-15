@@ -37,6 +37,9 @@ body {
 
 }
 
+.z{
+    margin-top: 100px;
+}
 .nav a {
     float: left;
     font-size: 28px;
@@ -174,10 +177,7 @@ input:hover {
     .countdown {
         font-size: 25px;
         display: flex;
-       margin-left: 20px ;
-    }
-    .z{
-        margin-top:90px;
+       margin-left: ;
     }
     .social{
         display: inline;
@@ -212,9 +212,7 @@ input:hover {
     .countdown {
         font-size: 56px;
     }
-     .z {
-         margin-top: 90px;
-     }
+
     .countdown {
         font-size: 25px;
         display: flex;

@@ -37,6 +37,9 @@ body {
 
 }
 
+.z{
+    margin-top: 100px;
+}
 .nav a {
     float: left;
     font-size: 28px;
@@ -174,29 +177,23 @@ input:hover {
     .countdown {
         font-size: 25px;
         display: flex;
-       margin-left: 20px ;
-    }
-    .z{
-        margin-top:90px;
     }
     .social{
         display: inline;
-        margin-left: 80px;
+        margin-left: 50px;
     }
     .navbar-brand img {
-        margin-top: 15px;
+        margin-top: 10px;
         margin-left: -60px;
     }
     .signup{
         text-align: center;
     }
-    
     .countdown div {
         display: flex;
         margin: 1rem 1rem 1rem 1rem;
         font-size: 2rem;
         flex-direction: column;
-      
     }
 
     .countdown div::after {
@@ -212,9 +209,7 @@ input:hover {
     .countdown {
         font-size: 56px;
     }
-     .z {
-         margin-top: 90px;
-     }
+
     .countdown {
         font-size: 25px;
         display: flex;

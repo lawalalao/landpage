@@ -8,7 +8,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     color: Black;
-
+    text-align: center;
 }
 .social i{
     color:#1E90FF;
@@ -37,6 +37,9 @@ body {
 
 }
 
+.z{
+    margin-top: 100px;
+}
 .nav a {
     float: left;
     font-size: 28px;
@@ -170,33 +173,17 @@ input:hover {
     bottom: -6rem;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 480px) {
     .countdown {
         font-size: 25px;
         display: flex;
-       margin-left: 20px ;
     }
-    .z{
-        margin-top:90px;
-    }
-    .social{
-        display: inline;
-        margin-left: 80px;
-    }
-    .navbar-brand img {
-        margin-top: 15px;
-        margin-left: -60px;
-    }
-    .signup{
-        text-align: center;
-    }
-    
+
     .countdown div {
         display: flex;
         margin: 1rem 1rem 1rem 1rem;
         font-size: 2rem;
         flex-direction: column;
-      
     }
 
     .countdown div::after {
@@ -212,9 +199,6 @@ input:hover {
     .countdown {
         font-size: 56px;
     }
-     .z {
-         margin-top: 90px;
-     }
     .countdown {
         font-size: 25px;
         display: flex;

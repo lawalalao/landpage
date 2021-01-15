@@ -176,9 +176,6 @@ input:hover {
         display: flex;
        margin-left: 20px ;
     }
-    .z{
-        margin-top:90px;
-    }
     .social{
         display: inline;
         margin-left: 80px;
@@ -212,9 +209,7 @@ input:hover {
     .countdown {
         font-size: 56px;
     }
-     .z {
-         margin-top: 90px;
-     }
+
     .countdown {
         font-size: 25px;
         display: flex;

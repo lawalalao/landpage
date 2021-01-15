@@ -8,7 +8,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     color: Black;
-
+    text-align: center;
 }
 .social i{
     color:#1E90FF;
@@ -18,34 +18,11 @@ body {
 .social i:hover {
     color: rgb(25, 29, 238);
 }
-.nav {
-    margin-top: 30px;
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    right: 30px;
-    left: 40px;
-    height: 35px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 25px 0 25px;
-    background-color: transparent;
-    transition: top 0.3s;
 
-
+.z{
+    margin-top: 100px;
 }
 
-.nav a {
-    float: left;
-    font-size: 28px;
-    font-weight: bold;
-    margin-left: 25px;
-    color: black;
-    text-decoration: none;
-
-}
 .txt-type>.txt {
     font-size: 35px;
     color: #1E90FF;
@@ -170,33 +147,17 @@ input:hover {
     bottom: -6rem;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 480px) {
     .countdown {
         font-size: 25px;
         display: flex;
-       margin-left: 20px ;
     }
-    .z{
-        margin-top:90px;
-    }
-    .social{
-        display: inline;
-        margin-left: 80px;
-    }
-    .navbar-brand img {
-        margin-top: 15px;
-        margin-left: -60px;
-    }
-    .signup{
-        text-align: center;
-    }
-    
+
     .countdown div {
         display: flex;
         margin: 1rem 1rem 1rem 1rem;
         font-size: 2rem;
         flex-direction: column;
-      
     }
 
     .countdown div::after {
@@ -212,9 +173,6 @@ input:hover {
     .countdown {
         font-size: 56px;
     }
-     .z {
-         margin-top: 90px;
-     }
     .countdown {
         font-size: 25px;
         display: flex;
@@ -250,20 +208,10 @@ input:hover {
     .content .countdown {
         font-size: 56px;
     }
+
 }
 @media screen and (min-width: 900px) {
-    .nav{
-        height: 80px;
-    }
-    .nav a {
-        float: left;
-        font-size: 40px;
-        font-weight: bold;
-        margin-left: 25px;
-        color: black;
-        text-decoration: none;
-
-    }
+ 
     .signup {
         display: flex;
         justify-content: space-between;
@@ -290,7 +238,6 @@ input:hover {
     }
 
     body {
-        margin:100px auto;
         max-width: 1000px;
         padding: 40px 20px;
         background: url("./assets/image.jpeg") ;
@@ -299,7 +246,16 @@ input:hover {
         font-family: 'Allerta Stencil',
         sans-serif;
     }
-    
+    .nav{
+        display: flex;
+
+    }
+    .navbar-brand img{
+        margin-right:50px;
+    }
+    .social{
+        margin-left:500px;
+    }
     h1 {
         font-size:45px;
         margin-bottom: 0px;

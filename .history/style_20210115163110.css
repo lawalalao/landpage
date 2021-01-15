@@ -179,16 +179,11 @@ input:hover {
         margin-top:90px;
     }
     .social{
-        margin-left: 2px;
-        
-    }
-    .social i {
-        color:white;
-        font-size: 18px;
+        margin-left: 100px;
     }
     .navbar-brand img {
         margin-top: 15px;
-        margin-left: -50px;
+        margin-left: -60px;
     }
     .signup{
         text-align: center;
@@ -269,8 +264,6 @@ input:hover {
     }
     .social{
         margin-right: 30px;
-        display:flex;
-        flex-direction:row;
     }
     .signup {
         display: flex;

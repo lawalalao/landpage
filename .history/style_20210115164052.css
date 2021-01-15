@@ -269,8 +269,6 @@ input:hover {
     }
     .social{
         margin-right: 30px;
-        display:flex;
-        flex-direction:row;
     }
     .signup {
         display: flex;

@@ -175,20 +175,30 @@ input:hover {
         display: flex;
        margin-left: 20px ;
     }
+    .nav{
+       margin-top: 30px;
+       position: fixed;
+       z-index: 1000;
+       top: 0;
+       right: 30px;
+       left: 40px;
+       height: 35px;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       align-items: center;
+       background-color: transparent;
+       transition: top 0.3s;
+    }
     .z{
         margin-top:90px;
     }
     .social{
-        margin-left: 2px;
-        
-    }
-    .social i {
-        color:white;
-        font-size: 18px;
+        margin-left: 25px;
     }
     .navbar-brand img {
         margin-top: 15px;
-        margin-left: -50px;
+        margin-left: -60px;
     }
     .signup{
         text-align: center;
@@ -269,8 +279,6 @@ input:hover {
     }
     .social{
         margin-right: 30px;
-        display:flex;
-        flex-direction:row;
     }
     .signup {
         display: flex;

@@ -184,7 +184,7 @@ input:hover {
     }
     .social i {
         color:white;
-        font-size: 18px;
+        font-size: 10px;
     }
     .navbar-brand img {
         margin-top: 15px;
@@ -269,8 +269,6 @@ input:hover {
     }
     .social{
         margin-right: 30px;
-        display:flex;
-        flex-direction:row;
     }
     .signup {
         display: flex;

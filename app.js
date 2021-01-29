@@ -1,7 +1,7 @@
 const countdown = document.querySelector(".countdown");
 
 const interval = setInterval(() => {
-  const deadline = new Date(2021,01, 05, 00, 00, 00);
+  const deadline = new Date(2021,01, 10, 00, 00, 00);
 
   const current = new Date();
 
